@@ -17,41 +17,42 @@
 </template>
 
 <script>
+export default {
+  name: "_courseId",
+};
+</script>
+
+<script setup>
 import courses from "@/api/json/courses.json";
 import { useRoute, useRouter } from "vue-router";
 import { ref, reactive, onUnmounted } from "vue";
-export default {
-  setup() {
-    const route = useRoute();
-    const router = useRouter();
-    const bHasCourse = ref(false);
-    const sErrorMessage = ref("沒有此課程");
-    const oCourse = reactive({ data: {} });
 
-    let timer = null;
+const route = useRoute();
+const router = useRouter();
+const bHasCourse = ref(false);
+const sErrorMessage = ref("沒有此課程");
+const oCourse = reactive({ data: {} });
 
-    courses.forEach((item) => {
-      if (item.id === parseInt(route.params.courseId)) {
-        bHasCourse.value = true;
-        oCourse.data = item;
-      }
-    });
+let timer = null;
 
-    if (!bHasCourse.value) {
-      timer = setTimeout(() => {
-        router.push({ name: "Home" });
-        //回到上一頁
-        //router.go(-1);
-      }, 3000);
-    }
+courses.forEach((item) => {
+  if (item.id === parseInt(route.params.courseId)) {
+    bHasCourse.value = true;
+    oCourse.data = item;
+  }
+});
 
-    onUnmounted(() => {
-      clearTimeout(timer);
-    });
+if (!bHasCourse.value) {
+  timer = setTimeout(() => {
+    router.push({ name: "Home" });
+    //回到上一頁
+    //router.go(-1);
+  }, 3000);
+}
 
-    return { oCourse, bHasCourse, sErrorMessage };
-  },
-};
+onUnmounted(() => {
+  clearTimeout(timer);
+});
 </script>
 
 <style scoped>

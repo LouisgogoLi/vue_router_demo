@@ -23,31 +23,32 @@
 </template>
 
 <script>
+export default {
+  name: "index",
+};
+</script>
+
+<script setup>
 import courses from "@/api/json/courses.json";
 import { useRouter } from "vue-router";
 import { reactive } from "vue";
-export default {
-  setup() {
-    const router = useRouter();
 
-    const oCourses = reactive({ data: {} });
-    oCourses.data = courses;
+const router = useRouter();
 
-    const fnGoToNewRouter = (id) => {
-      router.push({ name: "courses_courseId", params: { courseId: id } });
-    };
+const oCourses = reactive({ data: {} });
+oCourses.data = courses;
 
-    const fnOpenNewCourse = (id) => {
-      //router.resolve解析目標位置
-      const courseUrl = router.resolve({
-        name: "courses_courseId",
-        params: { courseId: id },
-      });
-      window.open(courseUrl.href);
-    };
+const fnGoToNewRouter = (id) => {
+  router.push({ name: "courses_courseId", params: { courseId: id } });
+};
 
-    return { oCourses, fnGoToNewRouter, fnOpenNewCourse };
-  },
+const fnOpenNewCourse = (id) => {
+  //router.resolve解析目標位置
+  const courseUrl = router.resolve({
+    name: "courses_courseId",
+    params: { courseId: id },
+  });
+  window.open(courseUrl.href);
 };
 </script>
 

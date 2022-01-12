@@ -40,46 +40,35 @@
 </template>
 
 <script>
+export default {
+  name: "Header",
+};
+</script>
+
+<script setup>
 import { useRoute } from "vue-router";
 import { ref, watch } from "vue";
-export default {
-  setup() {
-    let aRouterList = [
-      "",
-      "rwd",
-      "vuejs",
-      "reactjs",
-      "html5",
-      "nodejs",
-      "courses",
-    ];
 
-    const route = useRoute();
-    const nRouteIndex = ref(0);
-    watch(
-      () => route.path,
-      () => {
-        const sNowMainPath = route.path.split("/")[1];
+let aRouterList = ["", "rwd", "vuejs", "reactjs", "html5", "nodejs", "courses"];
 
-        aRouterList.forEach((item, index) => {
-          if (item === sNowMainPath) {
-            nRouteIndex.value = index;
-          }
-        });
+const route = useRoute();
+const nRouteIndex = ref(0);
+watch(
+  () => route.path,
+  () => {
+    const sNowMainPath = route.path.split("/")[1];
+
+    aRouterList.forEach((item, index) => {
+      if (item === sNowMainPath) {
+        nRouteIndex.value = index;
       }
-    );
+    });
+  }
+);
 
-    const isOpen = ref(false);
-    const handManuOpen = () => {
-      isOpen.value = !isOpen.value;
-    };
-
-    return {
-      isOpen,
-      handManuOpen,
-      nRouteIndex,
-    };
-  },
+const isOpen = ref(false);
+const handManuOpen = () => {
+  isOpen.value = !isOpen.value;
 };
 </script>
 

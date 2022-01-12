@@ -5,28 +5,31 @@
 </template>
 
 <script>
-import { onBeforeRouteLeave, onBeforeRouteUpdate } from "vue-router";
-import { onBeforeMount, onMounted } from "vue";
 export default {
-  setup() {
-    onBeforeRouteLeave((to, from) => {
-      console.log(to, from, 1);
-    });
-    onBeforeRouteUpdate((to, from) => {
-      console.log(to, from, 9);
-    });
-    console.log(6);
-    onBeforeMount(() => {
-      console.log(7);
-    });
-    onMounted(() => {
-      console.log(8);
-    });
-  },
+  name: "Nodejs",
 };
 </script>
 
-<style>
+<script setup>
+import { onBeforeRouteLeave, onBeforeRouteUpdate } from "vue-router";
+import { onBeforeMount, onMounted } from "vue";
+
+onBeforeRouteLeave((to, from) => {
+  console.log(to, from, 1);
+});
+onBeforeRouteUpdate((to, from) => {
+  console.log(to, from, 9);
+});
+console.log(6);
+onBeforeMount(() => {
+  console.log(7);
+});
+onMounted(() => {
+  console.log(8);
+});
+</script>
+
+<style scoped>
 .NODEJSPage {
   width: 100%;
   height: 300px;

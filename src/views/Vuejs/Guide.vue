@@ -1,7 +1,3 @@
-<script>
-export default {};
-</script>
-
 <template>
   <div>
     <h1 class="title">Guide</h1>
@@ -10,6 +6,12 @@ export default {};
     </a>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Guide",
+};
+</script>
 
 <style scoped>
 .title {

@@ -5,10 +5,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "NotFound",
+};
 </script>
 
-<style>
+<style scoped>
 .NOTFOUNDPage {
   width: 100%;
   height: 300px;

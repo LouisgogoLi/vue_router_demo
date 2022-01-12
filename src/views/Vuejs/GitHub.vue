@@ -1,7 +1,3 @@
-<script>
-export default {};
-</script>
-
 <template>
   <div>
     <h1 class="title">GitHub</h1>
@@ -10,6 +6,12 @@ export default {};
     </a>
   </div>
 </template>
+
+<script>
+export default {
+  name: "GitHub",
+};
+</script>
 
 <style scoped>
 .title {
