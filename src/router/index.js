@@ -1,9 +1,9 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "@/views/Home.vue";
-import VuejsHome from "@/views/Vuejs/index.vue";
-import Guide from "@/views/Vuejs/Guide.vue";
-import Reference from "@/views/Vuejs/Reference.vue";
-import Changelog from "@/views/Vuejs/Changelog.vue";
+import Home from "@/views/HomeView.vue";
+import VuejsHome from "@/views/Vuejs/Vuejsindex.vue";
+import Guide from "@/views/Vuejs/GuideView.vue";
+import Reference from "@/views/Vuejs/ReferenceView.vue";
+import Changelog from "@/views/Vuejs/ChangeLog.vue";
 import GitHub from "@/views/Vuejs/GitHub.vue";
 
 const routes = [
@@ -20,12 +20,12 @@ const routes = [
   {
     path: "/rwd",
     name: "rwd",
-    component: () => import("@/views/Rwd.vue"),
+    component: () => import("@/views/RwdView.vue"),
   },
   {
     path: "/vuejs",
     name: "vuejs",
-    component: () => import("@/views/Vuejs.vue"),
+    component: () => import("@/views/VuejsView.vue"),
     children: [
       {
         path: "",
@@ -57,17 +57,17 @@ const routes = [
   {
     path: "/reactjs",
     name: "reactjs",
-    component: () => import("@/views/Reactjs.vue"),
+    component: () => import("@/views/ReactjsView.vue"),
   },
   {
     path: "/html5",
     name: "html5",
-    component: () => import("@/views/Html5.vue"),
+    component: () => import("@/views/Html5View.vue"),
   },
   {
     path: "/nodejs",
     name: "nodejs",
-    component: () => import("@/views/Nodejs.vue"),
+    component: () => import("@/views/NodejsView.vue"),
     beforeEnter: (to, from) => {
       // 返回 false 以取消导航
       //return false
@@ -77,12 +77,12 @@ const routes = [
   {
     path: "/courses",
     name: "courses",
-    component: () => import("@/views/Courses/index.vue"),
+    component: () => import("@/views/Courses/CoursesIndex.vue"),
   },
   {
     path: "/courses/:courseId",
     name: "courses_courseId",
-    component: () => import("@/views/Courses/_courseId.vue"),
+    component: () => import("@/views/Courses/CourseId.vue"),
   },
   {
     path: "/:pathMatch(.*)*",

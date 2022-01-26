@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "Changelog",
+  name: "ChangeLog",
 };
 </script>
 

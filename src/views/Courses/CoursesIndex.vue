@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "index",
+  name: "CoursesIndex",
 };
 </script>
 

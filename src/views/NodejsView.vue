@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "Nodejs",
+  name: "NodejsView",
 };
 </script>
 

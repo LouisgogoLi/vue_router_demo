@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "Guide",
+  name: "GuideView",
 };
 </script>
 

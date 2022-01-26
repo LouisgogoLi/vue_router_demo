@@ -1,19 +1,19 @@
 <template>
-  <div class="RWDPage">
-    <h1>RWD</h1>
+  <div class="REACTJSPage">
+    <h1>REACTJS</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Rwd",
+  name: "ReactjsView",
 };
 </script>
 
 <style>
-.RWDPage {
+.REACTJSPage {
   width: 100%;
   height: 300px;
-  background-color: red;
+  background-color: yellow;
 }
 </style>

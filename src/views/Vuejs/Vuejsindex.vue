@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "index",
+  name: "VuejsIndex",
 };
 </script>
 

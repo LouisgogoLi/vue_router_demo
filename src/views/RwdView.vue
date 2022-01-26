@@ -1,19 +1,19 @@
 <template>
-  <div class="HTML5Page">
-    <h1>HTML5</h1>
+  <div class="RWDPage">
+    <h1>RWD</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Html5",
+  name: "RwdView",
 };
 </script>
 
 <style>
-.HTML5Page {
+.RWDPage {
   width: 100%;
   height: 300px;
-  background-color: rgb(255, 0, 179);
+  background-color: red;
 }
 </style>

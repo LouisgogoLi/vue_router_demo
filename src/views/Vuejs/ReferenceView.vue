@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "Reference",
+  name: "ReferenceView",
 };
 </script>
 
