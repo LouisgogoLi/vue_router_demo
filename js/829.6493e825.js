@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkapp"]=self["webpackChunkapp"]||[]).push([[829],{5829:function(n,e,a){a.r(e),a.d(e,{default:function(){return l}});var r=a(3396);const u={class:"RWDPage"},t=(0,r._)("h1",null,"RWD",-1),c=[t];function s(n,e,a,t,s,i){return(0,r.wg)(),(0,r.iD)("div",u,c)}var i={name:"RwdView"},p=a(89);const f=(0,p.Z)(i,[["render",s]]);var l=f}}]);

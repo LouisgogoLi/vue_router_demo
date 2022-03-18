@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkapp"]=self["webpackChunkapp"]||[]).push([[368],{5368:function(n,e,a){a.r(e),a.d(e,{default:function(){return f}});var r=a(3396);const t={class:"HTML5Page"},u=(0,r._)("h1",null,"HTML5",-1),c=[u];function s(n,e,a,u,s,i){return(0,r.wg)(),(0,r.iD)("div",t,c)}var i={name:"Html5View"},l=a(89);const p=(0,l.Z)(i,[["render",s]]);var f=p}}]);

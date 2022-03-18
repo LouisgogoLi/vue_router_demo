@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkapp"]=self["webpackChunkapp"]||[]).push([[149],{6149:function(n,e,a){a.r(e),a.d(e,{default:function(){return l}});var r=a(3396);const t={class:"REACTJSPage"},u=(0,r._)("h1",null,"REACTJS",-1),c=[u];function s(n,e,a,u,s,i){return(0,r.wg)(),(0,r.iD)("div",t,c)}var i={name:"ReactjsView"},p=a(89);const f=(0,p.Z)(i,[["render",s]]);var l=f}}]);
